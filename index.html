@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web</title>
+</head>
+<body>
+
+    <style>
+        * {
+          
+            padding: 0;
+            box-sizing: border-box;
+            font-family :  "Times New Roman", "Georgia", "Serif";
+        
+        }
+    </style>
+    
+<!-- <img src="../images/1.jpg" alt="" srcset=""> -->
+
+    <script>
+      
+
+      let main = document.createElement("div");
+
+      main.style.width = "100%";
+      main.style.display = "flex";
+      main.style.boxShadow = "0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)"
+      main.style.backgroundColor = "white ";
+      main.style.boxShadow = "2px black"
+      main.style.position = "fixed"
+      main.style.marginTop = "-1%"
+      main.style.zIndex = "1"
+      
+     
+      
+
+      document.body.appendChild(main);
+      
+ 
+
+          // Create elements
+          let logo = document.createElement("div");
+          let para = document.createElement("p");
+
+          // Style the logo
+          // para.style.width = "100%";
+          // logo.style.height = "30px";
+          // logo.style.alignSelf = "center";
+          // para.style.fontSize = "20px";
+
+          // Set text and styles for para
+          para.innerText = "Gourmet au Catering";
+          // para.style.backgroundColor = "red"
+          para.id = "para";
+          para.style.height = "40px"
+          para.style.padding = "10px"
+          para.style.marginLeft = "20px"
+          para.style.letterSpacing = "5px"
+
+     
+          main.appendChild(logo);
+          main.appendChild(para);
+
+         
+          para.addEventListener("mouseenter", function() {
+              para.style.backgroundColor = "darkgray";  
+              para.style.cursor = "pointer"  
+          });
+
+          para.addEventListener("mouseleave", function() {
+              para.style.backgroundColor = "transparent";      
+              
+          });
+
+          para.addEventListener("click", function () {
+            document.getElementById("homepage").scrollIntoView({ behavior: "smooth" });
+            console.log(homepage)
+        });
+
+                
+        // Create menu elements
+        let menu1 = document.createElement("div");
+        let menu2 = document.createElement("div");
+        let menu3 = document.createElement("div");
+
+        // Style the menus
+        menu1.style.width = "100px";
+        menu1.style.height = "40px";
+        menu1.style.padding = "10px";
+        menu1.style.marginTop = "20px";
+        menu1.style.marginLeft = "650px";
+        menu1.style.textAlign = "center";
+        menu1.style.letterSpacing = "5px";
+        menu1.innerText = "About";
+
+
+        menu2.style.width = "100px";
+        menu2.style.height = "40px";
+        menu2.style.padding = "10px";
+        menu2.style.marginTop = "20px";
+        menu2.style.marginLeft = "20px";
+        menu2.style.textAlign = "center";
+        menu2.style.letterSpacing = "5px";
+        menu2.innerText = "Menu";
+
+
+        menu3.style.width = "100px";
+        menu3.style.height = "40px";
+        menu3.style.padding = "10px";
+        menu3.style.marginTop = "20px";
+        menu3.style.marginLeft = "20px";
+        menu3.style.textAlign = "center";
+        menu3.style.letterSpacing = "5px";
+        menu3.innerText = "Contact";
+
+
+        // Add hover effect to menus
+        menu1.addEventListener("mouseenter", function () {
+          
+            menu1.style.backgroundColor = "darkgray";
+            menu1.style.cursor = "pointer";
+        });
+
+        menu1.addEventListener("mouseleave", function () {
+            menu1.style.backgroundColor = "transparent";
+        });
+
+        menu2.addEventListener("mouseenter", function () {
+            menu2.style.backgroundColor = "darkgray";
+            menu2.style.cursor = "pointer";
+        });
+
+        menu2.addEventListener("mouseleave", function () {
+            menu2.style.backgroundColor = "transparent";
+        });
+
+        menu3.addEventListener("mouseenter", function () {
+            menu3.style.backgroundColor = "darkgray";
+            menu3.style.cursor = "pointer";
+        });
+
+        menu3.addEventListener("mouseleave", function () {
+            menu3.style.backgroundColor = "transparent";
+        });
+
+        // Add click events to scroll to sections
+        menu1.addEventListener("click", function () {
+            document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+            console.log(about)
+        });
+
+        menu2.addEventListener("click", function () {
+            document.getElementById("menu").scrollIntoView({ behavior: "smooth" });
+            console.log(menu)
+        });
+
+        menu3.addEventListener("click", function () {
+            document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+            console.log(contact)
+        });
+
+        // Append menus to the main element
+        main.appendChild(menu1);
+        main.appendChild(menu2);
+        main.appendChild(menu3);
+
+            
+
+      
+        let bgimage = document.createElement("img");
+
+
+        bgimage.style.width = "100%"
+        bgimage.setAttribute("src", "hamburger.jpg")
+        bgimage.id = "homepage"
+
+
+        document.body.appendChild(bgimage)
+
+
+        // About Section
+
+        let aboutMain = document.createElement("div");
+
+        
+        aboutMain.style.width = "100%"
+        aboutMain.style.height = "100%"
+        aboutMain.style.display = "flex"
+        aboutMain.style.marginBottom = "80px"
+        aboutMain.id = "about"
+        // aboutMain.style.backgroundColor = "red"
+        // aboutMain.innerText = "Salik"
+
+        document.body.appendChild(aboutMain)
+
+
+
+        let aboutImage = document.createElement("div");
+
+        aboutImage.style.width = "100%"
+        aboutImage.style.height = "100%"
+        aboutImage.style.display = "flex"
+        // about2.style.backgroundColor = "green"
+        // about2.innerText = "Hamza Salik"
+        aboutMain.appendChild(aboutImage)
+
+
+
+        let secondimg = document.createElement("img");
+
+        secondimg.style.width = "550px"
+        secondimg.style.height = "650px"
+        secondimg.style.borderRadius = "5px"
+        secondimg.style.marginLeft = "130px"
+        secondimg.style.marginTop = "70px"
+        secondimg.style.position = "reletive"
+        secondimg.setAttribute("src", "tablesetting2.jpg")
+
+        aboutImage.appendChild(secondimg)
+
+       
+        let aboutHeading = document.createElement("div");
+
+        aboutHeading.style.width = "30%";
+        aboutHeading.style.height = "15%";
+        aboutHeading.style.position = " absolute";
+        aboutHeading.style.marginTop =  "5%";
+        aboutHeading.style.marginLeft =  "55%";
+        aboutHeading.style.fontSize =  "50px";
+        aboutHeading.style.textAlign =  "center";
+        // aboutHeading.style.color =  "white";
+        aboutHeading.innerText = "About Catering"
+        // aboutHeading.style.backgroundColor =  "gray";
+
+  
+        aboutMain.appendChild(aboutHeading)
+
+
+
+        let aboutSubHeading = document.createElement("div");
+
+        aboutSubHeading.style.width = "20%"
+        aboutSubHeading.style.height = "10%"
+        aboutSubHeading.style.marginTop = "15%"
+        aboutSubHeading.style.marginLeft = "60%"
+        aboutSubHeading.style.textAlign = "center"
+        aboutSubHeading.style.letterSpacing = "5px"
+        aboutSubHeading.style.fontSize = "20px"
+        aboutSubHeading.style.position = "absolute"
+        // aboutSubHeading.style.backgroundColor = "Green"
+        aboutSubHeading.innerText = "Tradition since 1889"
+        aboutMain.appendChild(aboutSubHeading)
+
+
+        let paragraph1 = document.createElement("div");
+
+        paragraph1.innerText = "The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use seasonal ingredients."
+        // paragraph1.style.backgroundColor = "blue"
+        paragraph1.style.height = "30%"
+        paragraph1.style.lineHeight = "30px"
+        // paragraph1.style.letterSpacing = "3px"
+        paragraph1.style.width = "40%"
+        paragraph1.style.position = "absolute"
+        paragraph1.style.marginTop = "20%"
+        paragraph1.style.marginLeft = "55%"
+        
+
+        aboutMain.appendChild(paragraph1)
+
+
+        let paragraph2 = document.createElement("div");
+
+        paragraph2.innerText = "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        // paragraph2.style.backgroundColor = "white"
+        paragraph2.style.lineHeight = "30px"
+        paragraph2.style.height = "30%"
+        paragraph2.style.width = "35%"
+        paragraph2.style.position = "absolute"
+        paragraph2.style.marginTop = "35%"
+        paragraph2.style.marginLeft = "55%"
+
+        aboutMain.appendChild(paragraph2)
+
+
+        let menudivmain = document.createElement("div");
+
+        menudivmain.style.backgroundColor = "red"
+        menudivmain.style.width = "100%"
+        menudivmain.style.height = "100%"
+        menudivmain.id = "menu"
+        // menudivmain.style.position = "absolute"
+        // menudivmain.style.display = "flex"
+        // menudivmain.innerText = "Salik Solutions"
+
+
+        document.body.appendChild(menudivmain)
+
+
+        let menuHeading = document.createElement("div");
+
+        // menuHeading.style.backgroundColor = "Blue"
+        menuHeading.innerText = "Our Menu"
+        menuHeading.style.marginLeft = "40px"
+        menuHeading.style.letterSpacing = "10px"
+        menuHeading.style.position = "absolute"
+        menuHeading.style.height = "60px"
+        menuHeading.style.fontSize = "40px"
+        menuHeading.style.marginTop = "10%"
+        menuHeading.style.marginLeft = "20%"
+
+
+        menudivmain.appendChild(menuHeading)
+
+
+        let menuHeadingh2 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh2.innerText = "Bread Basket"
+        menuHeadingh2.style.marginLeft = "10%"
+        menuHeadingh2.style.letterSpacing = "10px"
+        menuHeadingh2.style.marginTop = "20%"
+        menuHeadingh2.style.position = "absolute"
+        menuHeadingh2.style.height = "60px"
+        menuHeadingh2.style.fontSize = "20px"
+
+
+        menudivmain.appendChild(menuHeadingh2)
+
+
+        let menuHeadingh6 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh6.innerText = "Assortment of fresh baked fruit breads and muffins 5.50"
+        menuHeadingh6.style.marginLeft = "10%"
+        menuHeadingh6.style.marginTop = "23%"
+        menuHeadingh6.style.position = "absolute"
+        menuHeadingh6.style.height = "60px"
+        // menuHeadingh2.style.fontSize = "50px"
+
+
+        menudivmain.appendChild(menuHeadingh6)
+
+
+        let menuHeadingh22 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh22.innerText = "Honey Almond Granola with Fruits"
+        menuHeadingh22.style.marginLeft = "10%"
+        menuHeadingh22.style.letterSpacing = "7px"
+        menuHeadingh22.style.marginTop = "28%"
+        menuHeadingh22.style.position = "absolute"
+        menuHeadingh22.style.height = "60px"
+        menuHeadingh22.style.fontSize = "20px"
+
+
+        menudivmain.appendChild(menuHeadingh22)
+
+
+
+        let menuHeadingh66 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh66.innerText = "Natural cereal of honey toasted oats, raisins, almonds and dates 7.00"
+        menuHeadingh66.style.marginLeft = "10%"
+        menuHeadingh66.style.marginTop = "31%"
+        menuHeadingh66.style.position = "absolute"
+        menuHeadingh66.style.height = "60px"
+        // menuHeadingh2.style.fontSize = "50px"
+
+
+        menudivmain.appendChild(menuHeadingh66)
+
+
+        let menuHeadingh222 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh222.innerText = "Belgian Waffle"
+        menuHeadingh222.style.marginLeft = "10%"
+        menuHeadingh222.style.letterSpacing = "7px"
+        menuHeadingh222.style.marginTop = "36%"
+        menuHeadingh222.style.position = "absolute"
+        menuHeadingh222.style.height = "60px"
+        menuHeadingh222.style.fontSize = "20px"
+
+
+        menudivmain.appendChild(menuHeadingh222)
+
+
+
+        let menuHeadingh666 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh666.innerText = "Vanilla flavored batter with malted flour 7.50"
+        menuHeadingh666.style.marginLeft = "10%"
+        menuHeadingh666.style.marginTop = "38%"
+        menuHeadingh666.style.position = "absolute"
+        menuHeadingh666.style.height = "60px"
+        // menuHeadingh2.style.fontSize = "50px"
+
+
+        menudivmain.appendChild(menuHeadingh666)
+
+        let menuHeadingh2222 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh2222.innerText = "Scrambled eggs"
+        menuHeadingh2222.style.marginLeft = "10%"
+        menuHeadingh2222.style.letterSpacing = "7px"
+        menuHeadingh2222.style.marginTop = "43%"
+        menuHeadingh2222.style.position = "absolute"
+        menuHeadingh2222.style.height = "60px"
+        menuHeadingh2222.style.fontSize = "20px"
+
+
+        menudivmain.appendChild(menuHeadingh2222)
+
+
+        let menuHeadingh6666 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh6666.innerText = "Scrambled eggs, roasted red pepper and garlic, with green onions 7.50"
+        menuHeadingh6666.style.marginLeft = "10%"
+        menuHeadingh6666.style.marginTop = "45%"
+        menuHeadingh6666.style.position = "absolute"
+        menuHeadingh6666.style.height = "60px"
+        // menuHeadingh2.style.fontSize = "50px"
+
+
+        menudivmain.appendChild(menuHeadingh6666)
+
+
+
+
+        let menuHeadingh22222 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh22222.innerText = "Blueberry Pancakes"
+        menuHeadingh22222.style.marginLeft = "10%"
+        menuHeadingh22222.style.letterSpacing = "7px"
+        menuHeadingh22222.style.marginTop = "50%"
+        menuHeadingh22222.style.position = "absolute"
+        menuHeadingh22222.style.height = "60px"
+        menuHeadingh22222.style.fontSize = "20px"
+
+
+        menudivmain.appendChild(menuHeadingh22222)
+
+        let menuHeadingh66666 = document.createElement("div");
+
+        // menuHeadingh2.style.backgroundColor = "red"
+        menuHeadingh66666.innerText = "With syrup, butter and lots of berries 8.50"
+        menuHeadingh66666.style.marginLeft = "10%"
+        menuHeadingh66666.style.marginTop = "52%"
+        menuHeadingh66666.style.position = "absolute"
+        menuHeadingh66666.style.height = "60px"
+        // menuHeadingh2.style.fontSize = "50px"
+
+
+        menudivmain.appendChild(menuHeadingh66666)
+
+
+        let menuImage = document.createElement("img");
+
+        menuImage.setAttribute("src", "tablesetting.jpg")
+        menuImage.style.marginLeft = "55%"
+        // menuImage.style.height = "100%"
+        menuImage.style.position = "absolute"
+        menuImage.style.marginTop = "90px"
+        menuImage.style.marginBottom = "90px"
+        menuImage.style.borderRadius = "10px"
+
+        menudivmain.appendChild(menuImage)
+
+
+
+        // Contact Section
+
+        let contactMain = document.createElement("div");
+
+        contactMain.innerText = "Contact"
+        // contactMain.style.backgroundColor = "green"
+        contactMain.style.letterSpacing = "10px"
+        contactMain.style.width = "20%"
+        contactMain.style.position = "absolute"
+        contactMain.style.marginTop = "80%"
+        contactMain.style.fontSize = "40px"
+        contactMain.style.marginLeft = "10%"
+        contactMain.id = "contact"
+
+        document.body.appendChild(contactMain)
+
+        let contactParagraph = document.createElement("div");
+
+        contactParagraph.innerText = "We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggest criteria of them all, both look and taste. Do not hesitate to contact us."
+        // contactParagraph.style.backgroundColor = "red"
+        contactParagraph.style.width = "83%"
+        contactParagraph.style.position = "absolute"
+        contactParagraph.style.marginTop = "87%"
+        contactParagraph.style.marginLeft = "10%"
+
+        document.body.appendChild(contactParagraph)
+
+        let address = document.createElement("h2");
+
+        address.innerText = "Catering Service, 42nd Living St, 43043 New York, NY"
+        address.style.position = "absolute"
+        // address.style.backgroundColor = "blue"
+        address.style.marginTop = "91%"
+        address.style.marginLeft = "10%"
+        address.style.color = "#607D8B"
+
+        document.body.appendChild(address)
+
+        let contactParagraph2 = document.createElement("div");
+
+        contactParagraph2.innerText = "You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:."
+        // contactParagraph.style.backgroundColor = "red"
+        contactParagraph2.style.width = "83%"
+        contactParagraph2.style.position = "absolute"
+        contactParagraph2.style.marginTop = "94%"
+        contactParagraph2.style.marginLeft = "10%"
+
+        document.body.appendChild(contactParagraph2)
+
+       
+        let name = document.createElement("input");
+        name.setAttribute("type", "text")
+        name.setAttribute("placeholder", "Name")  
+        name.style.width = "80%"
+        name.style.padding = "12px"
+        name.style.marginTop = "10px"  
+        name.style.position = "absolute"
+        name.style.marginTop = "97%"
+        name.style.marginLeft = "10%"
+        name.style.height = "50px"
+        name.style.fontSize = "15px"
+        name.style.borderTop = "none"
+        name.style.borderLeft = "none"
+        name.style.borderRight = "none"
+
+        document.body.appendChild(name)
+
+       
+        let number = document.createElement("input");
+        number.style.width = "80%"
+        number.setAttribute("type", "number")
+        number.setAttribute("placeholder", "How many people")  
+        number.style.padding = "12px"  
+        number.style.marginTop = "10px"  
+        number.style.position = "absolute"
+        number.style.marginTop = "101%"
+        number.style.marginLeft = "10%"
+        number.style.height = "50px"
+        number.style.fontSize = "15px"
+        number.style.borderTop = "none"
+        number.style.borderLeft = "none"
+        number.style.borderRight = "none"
+
+        document.body.appendChild(number)
+
+       
+        let date = document.createElement("input");
+        date.style.width = "80%"
+        date.setAttribute("type", "datetime-local")
+        date.setAttribute("placeholder", "Event date")  
+        date.style.padding = "12px"  
+        date.style.marginTop = "10px"  
+        date.style.position = "absolute"
+        date.style.marginTop = "105%"
+        date.style.marginLeft = "10%"
+        date.style.height = "50px"
+        date.style.fontSize = "15px"
+        date.style.borderTop = "none"
+        date.style.borderLeft = "none"
+        date.style.borderRight = "none"
+
+        document.body.appendChild(date)
+
+        let text = document.createElement("input");
+        text.setAttribute("type", "text")
+        text.setAttribute("placeholder", "Message / Specail requirements")  
+        text.style.padding = "12px"  
+        text.style.marginTop = "10px"  
+        text.style.position = "absolute"
+        text.style.marginTop = "109%"
+        text.style.marginLeft = "10%"
+        text.style.height = "50px"
+        text.style.width = "80%"
+        text.style.fontSize = "15px"
+        text.style.borderTop = "none"
+        text.style.borderLeft = "none"
+        text.style.borderRight = "none"
+
+        document.body.appendChild(text)
+
+       
+        let button = document.createElement("button");
+
+        button.style.backgroundColor = "#F1F1F1"
+        button.innerText = "Send Message"
+        button.style.position = "absolute"
+        button.style.textTransform = "uppercase";
+        button.style.marginTop = "115%"
+        button.style.marginLeft = "10%"
+        button.style.height = "30px"
+        button.style.width = "12%"
+        button.style.fontSize = "15px"
+        button.style.border = "none"
+        button.style.borderRadius = "3px"
+        button.id = "send"
+        button.style.fontFamily = "Times New Roman", "Georgia", "Serif"
+
+        document.body.appendChild(button)
+
+        // Hover effect for the button
+        send.addEventListener("mouseenter", function () {
+          send.style.backgroundColor = "darkgray";
+          send.style.cursor = "pointer"
+        });
+
+        send.addEventListener("mouseleave", function () {
+          send.style.backgroundColor = "#F1F1F1";
+        });
+
+
+    
+
+        let footer = document.createElement("div")
+
+        footer.style.backgroundColor = "#F1F1F1"
+        footer.style.marginTop = "130%"
+        footer.style.textAlign = "center"
+        footer.style.paddingTop = "45px"
+        footer.style.width = "100%"
+        footer.style.height = "100px"
+        footer.innerText = "Powered by"
+
+        // Create the anchor element for the clickable link
+        let footerLink = document.createElement("a")
+
+        footerLink.id = "w3"
+        footerLink.setAttribute("href", "https://www.w3schools.com/w3css/default.asp")
+        footerLink.setAttribute("target", "_blank");
+        footerLink.style.color = "black" 
+        footerLink.innerText = " w3.css"
+
+        footerLink.addEventListener("mouseenter", function() {
+            footerLink.style.color = "green"; 
+        });
+
+        footerLink.addEventListener("mouseleave", function() {
+            footerLink.style.color = "black"; 
+           
+        });
+
+        
+        footer.appendChild(footerLink);
+        document.body.appendChild(footer);
+
+      
+        // let numbers = document.createElement("div");
+        // let btn1 = document.createElement("button");
+        // let btn2 = document.createElement("button");
+        // let btn3 = document.createElement("button");
+
+       
+        // let count = 0;
+        // numbers.innerText = count;
+        // numbers.id = "num";
+
+        
+        // btn1.innerText = "Increase";
+        // btn1.id = "plus";
+
+        // btn1.addEventListener("click", function() {
+        //     count++;
+        //     document.getElementById("num").innerText = count;
+        // });
+
+        
+        // btn2.innerText = "Decrease";
+        // btn2.id = "minus";
+
+        // btn2.addEventListener("click", function() {
+        //     count--;
+        //     document.getElementById("num").innerText = count;
+        // });
+
+       
+        // btn3.innerText = "Reset";
+        // btn3.id = "reset";
+
+        // btn3.addEventListener("click", function() {
+        //     count = 0;
+        //     document.getElementById("num").innerText = count;
+        // });
+
+       
+        // document.body.appendChild(numbers);
+        // document.body.appendChild(btn1);
+        // document.body.appendChild(btn2);
+        // document.body.appendChild(btn3);
+    </script>
+
+    
+</body>
+</html>
